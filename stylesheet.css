@@ -1,0 +1,28 @@
+html {
+    background-color: white;
+    padding: 10px;
+}
+
+.enterInput {
+    display: flex;
+}
+
+table, th, td {
+    border: 1px solid;
+  }
+
+th {
+    color: #336699;
+    background-color: #CCCC99;
+}
+
+td {
+    background-color: #F7F7E7;
+}
+
+fieldset {
+    border: 0;
+}
+ul {
+    list-style-type: none;
+}
