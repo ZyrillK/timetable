@@ -220,98 +220,18 @@
                     <!--Checkboxes added here-->
                 </div>
             </fieldset>
-            <button onclick="generateSchedule()">Generate Schedule</button>
+            <!--<button onclick="generateSchedule()">Generate Schedule</button> -->
     
-            <!-- The following lines are for test purposes -->
-            <div class="schedule">
-                <h3>Your Schedule for Term 1</h3>
-                <ul id="scheduleListTerm1">
-                    <!-- Generated courses for Term 1 will be listed here -->
-                </ul>
-    
-                <h3>Your Schedule for Term 2</h3>
-                <ul id="scheduleListTerm2">
-                    <!-- Generated courses for Term 2 will be listed here -->
-                </ul>
-            </div>
+            
         </div>
 
         <!--hi-->
 
-        <form action="test" method="post">
-            <div class="enterInput">
-            <fieldset>
-            <legend>Pick a major and check completed courses</legend>
-            <p>
-                <label for="major">*Major </label>
-                <select name="userMajor" id="major" required>
-                    <option value="compSci">Computer Science</option>
-                    <option value="math">Mathematics</option>
-                    <option value="psych">Psychology</option>
-                </select>
-            
-            </p>
-            
-            <p>
-                <ul>
-                    <li>
-                        <input type="checkbox" id="majReq1" name="majChecked" value="majReq1">
-                        <label for="majReq1"> Test1</label>
-                    </li>
+        <p>Some Education and/or Music courses may not display the proper time slot. Refer to the online Registration Guide to verify time slots.</p>
 
-                    <li>
-                        <input type="checkbox" id="majReq2" name="majChecked" value="majReq2">
-                        <label for="majReq2"> Test2</label>
-                    </li>
+        <p><button onclick="generateSchedule()">Generate Timetable</button></p>
 
-                    <li>
-                        <input type="checkbox" id="majReq3" name="majChecked" value="majReq3">
-                        <label for="majReq3"> Test3</label>
-                    </li>
-                </ul>
-            </p>
-            </fieldset>
-
-            <fieldset>
-                <legend>Pick a minor and check completed courses</legend>
-            <p>
-                <label for="minor">*Minor </label>
-                <select name="userMinor" id="minor" required>
-                    <option value="compSci">Computer Science</option>
-                    <option value="math">Mathematics</option>
-                    <option value="psych">Psychology</option>
-                </select>
-            </p>
-
-            <p>
-                <ul>
-                    <li>
-                        <input type="checkbox" id="minReq1" name="minChecked" value="minReq1">
-                        <label for="minReq1"> Test1</label>
-                    </li>
-
-                    <li>
-                        <input type="checkbox" id="minReq2" name="minChecked" value="minReq2">
-                        <label for="minReq2"> Test2</label>
-                    </li>
-
-                    <li>
-                        <input type="checkbox" id="minReq3" name="minChecked" value="minReq3">
-                        <label for="minReq3"> Test3</label>
-                    </li>
-                </ul>
-            </p>
-            </fieldset>
-            </div>
-
-            <p>Some Education and/or Music courses may not display the proper time slot. Refer to the online Registration Guide to verify time slots.</p>
-
-            <p>
-            <button>Generate Timetable</button>
-            </p>
-        </form>
-
-        <table>
+        <table id="scheduleListTerm1">
             
             <tr>
                 <th>Monday</th>
@@ -379,9 +299,9 @@
             </tr>
 
             <tr>
-                <td rowspan="2" id="1slot7T1">Slot 07</td>
-                <td rowspan="2" id="1slot7T1">Slot 07</td>
-                <td rowspan="2" id="1slot7T1">Slot 07</td>
+                <td rowspan="2" id="slot7T1">Slot 07</td>
+                <td rowspan="2" id="slot7T1">Slot 07</td>
+                <td rowspan="2" id="slot7T1">Slot 07</td>
             </tr>
             <tr></tr>
 
@@ -407,7 +327,7 @@
 
         <!--TERM 2 :O-->
 
-        <table>
+        <table id="scheduleListTerm2">
             
             <tr>
                 <th>Monday</th>

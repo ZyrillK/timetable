@@ -131,8 +131,20 @@ function generateSchedule() {
     console.log(untaken.length);
     finalCourses.forEach(course => {console.log(typeof course.id)})
 
+    const tableItem = document.querySelectorAll("td");
+            tableItem.forEach(cell => {
+                
+                let numPart = cell.id.slice(4,6);
+                if(numPart[1] == "T") {
+                    numPart = numPart[0];
+                }
+                cell.textContent = `Slot ${numPart}`;
+            });
+
+    
     displaySchedule(genTermSched(1, untaken), 'scheduleListTerm1')
     displaySchedule(genTermSched(2, untaken), 'scheduleListTerm2')
+    this.updateStyle()
 }
 
 function genTermSched(term, untaken){
@@ -164,14 +176,20 @@ function genTermSched(term, untaken){
 
 //Alter this function to work properly with the timetable layout designed
 function displaySchedule(schedule, listId) {
+
+    /*
     const scheduleList = document.getElementById(listId);
     console.log(listId);
     scheduleList.innerHTML = "";  // Clear any previous schedule
+    */
 
     schedule.forEach(course => {
+
+        /*
         const listItem = document.createElement("li");
         listItem.textContent = `Course ${course.id} - ${course.name}, Year ${course.year}, Selected Slot: ${course.selectedSlot}`;
-        scheduleList.appendChild(listItem);
+        scheduleList.appendChild(listItem);*/
+
 
         if(listId == "scheduleListTerm1") {
 
@@ -180,7 +198,7 @@ function displaySchedule(schedule, listId) {
                 cell.textContent = `${course.name}`;
             });
         }
-        else {
+        else if(listId == "scheduleListTerm2") {
 
             const tableItem = document.querySelectorAll(`#slot${course.selectedSlot}T2`);
             tableItem.forEach(cell => {
