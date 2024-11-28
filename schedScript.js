@@ -28,9 +28,11 @@ const courseList = [
 ]; globalThis.courseList = courseList;
 
 const compSciMajor=[
+    
     getCourse(160), getCourse(161), getCourse(171), getCourse(181), getCourse(182), getCourse(191),
     getCourse(256), getCourse(257), getCourse(261), getCourse(264), getCourse(290), getCourse(353),
     getCourse(367), getCourse(373), getCourse(460), getCourse(461), getCourse(463)
+
 ]; globalThis.compSciMajor = compSciMajor;
 
 const mathMajor =[ //ALso has additional major requirements that have been omitted
